@@ -12,7 +12,7 @@
 
 // Initialize Plugin
 function sv_insert_visualizer() {
-	echo( include_once( plugin_dir_path( __FILE__ ) . 'includes/sv-markup.php' ) );
+	include_once( plugin_dir_path( __FILE__ ) . 'includes/sv-markup.php' );
 }
 add_shortcode('shingle_visualizer', 'sv_insert_visualizer');
 
@@ -20,9 +20,10 @@ add_shortcode('shingle_visualizer', 'sv_insert_visualizer');
 // Enqueue scripts & styles
 function sv_enqueue_scripts() {
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script('sv-scripts', plugin_dir_url( __FILE__ ) . 'js/sv-scripts.js');
-	wp_localize_script( 'sv-scripts', 'sv_plugin_dir', plugin_dir_url( __FILE__ ) );
-	wp_register_style( 'sv-style', plugins_url('shingle-visualizer/styles/sv-style.css' ) );
-	wp_enqueue_style( 'sv-style' );
+	wp_enqueue_script('sv-scripts', plugins_url( 'js/sv-scripts.js', __FILE__ ) );
+	wp_localize_script( 'sv-scripts', 'sv_plugin_images_dir', plugins_url( 'images/', __FILE__ ) );
+	wp_enqueue_style( 'sv-style', plugins_url('styles/sv-style.css', __FILE__ ) );
 }
 add_action( 'wp_enqueue_scripts', 'sv_enqueue_scripts' );
+
+?>

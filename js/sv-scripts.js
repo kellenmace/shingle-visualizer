@@ -126,11 +126,11 @@ jQuery(document).ready(function ($) {
   var sv_dropdown_toggle = function( sv_toggle_arg ) {
     if ( $( sv_toggle_arg ).is( ":hidden" ) ) {
         $( sv_toggle_arg ).slideDown( 250 );
-    }       
+    }
     else {
         sv_slideup( sv_dropdown_id );
     }
-  }
+  };
 
 
   // Function to slideup dropdown, if currently visible
@@ -138,7 +138,7 @@ jQuery(document).ready(function ($) {
     if ( $( sv_arg ).is( ":visible" ) ) {
       $( sv_arg ).slideUp(250);
     }
-  }
+  };
 
 
   // When a house style is clicked
@@ -255,7 +255,7 @@ jQuery(document).ready(function ($) {
         $( '#sv_steps' ).removeClass( 'sv_steps_hidden' ).addClass( 'sv_steps_table' );
       }, 250 );
     }
-  }
+  };
 
 
   // Function to display composite image of selected house with selected shingles in the background
@@ -281,17 +281,17 @@ jQuery(document).ready(function ($) {
       // Display composite image background (shingles)
       if ( sv_shingle_style == 'traditional' ) {
         if ( sv_shingle_color == 'beachwood' ) {
-          $( '#sv_composite_image' ).append( '<img src="' + sv_plugin_dir + 'images/composite/iko_marathon_beachwood_solid.png" alt="Composite Image Background" id="sv_composite_backgound" />' );
+          $( '#sv_composite_image' ).append( '<img src="' + sv_plugin_images_dir + 'composite/iko_marathon_beachwood_solid.png" alt="Composite Image Background" id="sv_composite_backgound" />' );
         }
       }
 
       // Display composite image foreground (house)
       if ( sv_house_style == 'colonial' ) {
-        $( '#sv_composite_image' ).append( '<img src="' + sv_plugin_dir + 'images/composite/colonial.png" alt="Composite Image Foreground" id="sv_composite_foreground" />' );
+        $( '#sv_composite_image' ).append( '<img src="' + sv_plugin_images_dir + 'composite/colonial.png" alt="Composite Image Foreground" id="sv_composite_foreground" />' );
       }
       if ( sv_house_style == 'ranch' ) {
-        $( '#sv_composite_image' ).append( '<img src="' + sv_plugin_dir + 'images/composite/ranch.png" alt="Composite Image" id="sv_composite_foreground" />' );
+        $( '#sv_composite_image' ).append( '<img src="' + sv_plugin_images_dir + 'composite/ranch.png" alt="Composite Image" id="sv_composite_foreground" />' );
       }
     }
-  }
+  };
 });

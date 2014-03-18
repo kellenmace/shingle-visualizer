@@ -1,13 +1,21 @@
-/* Plugin Header */
+/* Wrapper */
+
+#sv_wrapper {
+	max-width: 700px;
+}
+
+/* Header */
 
 #sv_title {
 	background-color: #e0e0e0;
 	border: 1px solid #949494;
 	height: 55px;
-	-moz-border-radius-topleft: 30px;
 	-webkit-border-top-left-radius: 30px;
-	-moz-border-radius-topright: 30px;
+	-moz-border-radius-topleft: 30px;
+	border-top-left-radius: 30px;
 	-webkit-border-top-right-radius: 30px;
+	-moz-border-radius-topright: 30px;
+	border-top-right-radius: 30px;
 }
 
 #sv_title h3 {
@@ -25,9 +33,9 @@
 }
 
 #sv_main_content {
-	height: 400px;
+	height: 455px;
 	position: relative;
-	overflow: auto;
+	overflow: hidden;
 	background-image:url("../images/background_house.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
@@ -171,6 +179,7 @@
 	left: 0px;
 	right: 0px;
 	z-index: 91;
+	width: 100%;
 }
 
 
